@@ -82,6 +82,11 @@ sudo apt-get autoremove -y -f
 sudo apt-get clean
 
 echoYellow "###################################################################"
+echoGreen "Отключить IPV6 http://e-kzn.ru/adminu/kak-otkliuchit-ipv6-v-debian.html"
+echo "disable IPv6"
+sudo bash -c "echo net.ipv6.conf.all.disable_ipv6=1 > /etc/sysctl.d/disableipv6.conf"
+
+echoYellow "###################################################################"
 echo -n "  Current version"
 cat /etc/debian_version
 echoYellow "###################################################################"
