@@ -27,6 +27,14 @@ echoGreen "set time via NTP"
 sudo ntpdate-debian
 
 echoYellow "###################################################################"
+echoGreen "set locales"
+sudo dpkg-reconfigure locales
+
+echoYellow "###################################################################"
+echoGreen "set timezone"
+sudo dpkg-reconfigure tzdata
+
+echoYellow "###################################################################"
 echoGreen "  Current version `cat /etc/debian_version`"
 echoGreen "  Update to Debian 8"
 
