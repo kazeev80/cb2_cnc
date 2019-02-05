@@ -28,8 +28,11 @@ sudo ntpdate-debian
 
 echoYellow "###################################################################"
 echoGreen "  Update /etc/apt/sources.list"
-sudo bash -c "echo 'deb     http://buildbot.linuxcnc.org/ jessie 2.7-sim'              > /etc/apt/sources.list"
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.old
+sudo bash -c "cat  /etc/apt/sources.list.old > /etc/apt/sources.list"
+sudo bash -c "echo 'deb     http://buildbot.linuxcnc.org/ jessie 2.7-sim'                >> /etc/apt/sources.list"
 sudo bash -c "echo 'deb-src http://buildbot.linuxcnc.org/ jessie 2.7-sim'                >> /etc/apt/sources.list"
+sudo rm /etc/apt/sources.list.old
 sudo apt-get autoremove -y -f
 sudo apt-get clean
 sudo apt-get update -y
