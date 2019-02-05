@@ -99,6 +99,10 @@ echoGreen "  Устанавливаем RDP клиент"
 sudo apt-get install xrdp -y -f
 
 echoYellow "###################################################################"
+echoGreen "  Устанавливаем VIM"
+sudo apt-get install vim -y -f
+
+echoYellow "###################################################################"
 echo -n "  Current version"
 cat /etc/debian_version
 echoYellow "###################################################################"
