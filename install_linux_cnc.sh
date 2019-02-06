@@ -111,6 +111,7 @@ autoreconf -vi
 sudo make install
 sudo cp xorg.conf /etc/X11/xorg.conf
 cd ..
+sudo rm -r xf86-video-fbturbo
 
 echoYellow "###################################################################"
 echoGreen "  Installing linux cnc...."
