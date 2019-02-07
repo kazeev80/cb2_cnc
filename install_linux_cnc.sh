@@ -60,8 +60,8 @@ sudo rm -r xf86-video-fbturbo
 
 echoYellow "###################################################################"
 echoGreen "Install needed packages"
-sudo apt install cython
-sudo apt install uuid-runtime
+sudo aptitude install -y cython
+sudo aptitude install -y uuid-runtime
 
 sudo aptitude install -y \
     git build-essential libtool \
@@ -77,6 +77,7 @@ make check
 sudo make install
 sudo ldconfig
 cd ..
+sudo rm -r libzmq
 
 git clone git://github.com/zeromq/czmq.git
 cd czmq
@@ -84,6 +85,7 @@ cd czmq
 sudo make install
 sudo ldconfig
 cd ..
+sudo rm -r czmq
 
 echoYellow "###################################################################"
 echoGreen "  Installing linux cnc...."
