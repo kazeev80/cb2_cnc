@@ -72,6 +72,7 @@ sudo aptitude install -y libwebsockets-dev
 sudo aptitude install -y libssl-dev
 sudo apt install -y libuuid1=2.25.2-6
 sudo apt install -y uuid-dev -f
+sudo aptitude install libavahi-client-dev -y
 
 sudo easy_install pip
 sudo pip install protobuf
