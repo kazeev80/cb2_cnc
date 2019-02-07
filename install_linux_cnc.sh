@@ -76,7 +76,7 @@ sudo aptitude install libavahi-common3=0.6.31-5 -y
 sudo aptitude install libavahi-client-dev -y
 sudo aptitude install libcgroup-dev -y
 sudo aptitude install libmodbus-dev -y
-sudo aptitude install libgtk2.0-dev -y
+sudo aptitude install libglib2.0-dev -y
 
 sudo easy_install pip
 sudo pip install protobuf
