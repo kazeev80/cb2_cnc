@@ -38,6 +38,11 @@ echoYellow "###################################################################"
 echoGreen "Upgrade packages"
 sudo apt-get upgrade -y
 
+echoYellow "###################################################################"
+echoGreen "  Update sources"
+sudo apt-get autoremove -y -f
+sudo apt-get clean
+sudo apt-get update -y
 
 echoYellow "###################################################################"
 echoGreen "  Update mali video drivers"
@@ -52,6 +57,9 @@ sudo make install
 sudo cp xorg.conf /etc/X11/xorg.conf
 cd ..
 sudo rm -r xf86-video-fbturbo
+
+sudo apt install cython
+sudo apt install uuid-runtime
 
 echoYellow "###################################################################"
 echoGreen "  Installing linux cnc...."
