@@ -61,7 +61,6 @@ sudo rm -r xf86-video-fbturbo
 sudo apt install cython
 sudo apt install uuid-runtime
 
-sudo apt update
 sudo aptitude install -y \
     git build-essential libtool \
     pkg-config autotools-dev autoconf automake cmake \
