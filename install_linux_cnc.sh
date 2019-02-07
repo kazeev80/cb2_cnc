@@ -58,8 +58,34 @@ sudo cp xorg.conf /etc/X11/xorg.conf
 cd ..
 sudo rm -r xf86-video-fbturbo
 
-sudo apt install cython
-sudo apt install uuid-runtime
+echoYellow "###################################################################"
+echoGreen "Install needed packages"
+sudo aptitude install -y cython
+sudo aptitude install -y uuid-runtime
+
+sudo aptitude install -y \
+    git build-essential libtool \
+    pkg-config autotools-dev autoconf automake cmake \
+    uuid-dev libpcre3-dev libsodium-dev valgrind
+    
+git clone git://github.com/zeromq/libzmq.git
+cd libzmq
+./autogen.sh
+# do not specify "--with-libsodium" if you prefer to use internal tweetnacl security implementation (recommended for development)
+./configure --with-libsodium
+make check
+sudo make install
+sudo ldconfig
+cd ..
+sudo rm -r libzmq
+
+git clone git://github.com/zeromq/czmq.git
+cd czmq
+./autogen.sh && ./configure && make check
+sudo make install
+sudo ldconfig
+cd ..
+sudo rm -r czmq
 
 echoYellow "###################################################################"
 echoGreen "  Installing linux cnc...."
