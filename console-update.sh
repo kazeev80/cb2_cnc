@@ -29,25 +29,6 @@ sudo ntpdate-debian
 echoYellow "###################################################################"
 echoGreen "Remove packeges"
 sudo apt-get -y --force-yes autoremove
-
-echoGreen "Remove ajenti"
-sudo apt-get remove -y --force-yes ajenti
-
-echoGreen "Remove mc"
-sudo apt-get -y remove mc mc-data
-
-echoGreen "Remove python"
-sudo apt-get remove -y python python-dbus python-dbus-dev python-gi python-minimal python-support python2.7 python2.7-minimal
-
-sudo apt-get remove -y gsfonts-x11 libfontenc1 libx11-data \
-		       libxau6  libxdmcp6 libxfont1
-
-sudo apt-get remove -y gsfonts-x11 libx11-6 libx11-xcb1 x11-common x11-utils
-
-echoGreen "Remove java"
-sudo apt-get remove -y --force-yes java-common oracle-java7-jdk oracle-java7-jre
-
-sudo apt-get -y --force-yes autoremove
 sudo apt-get clean
 
 echoYellow "###################################################################"
