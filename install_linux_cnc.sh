@@ -78,6 +78,7 @@ sudo aptitude install libcgroup-dev -y
 
 sudo easy_install pip
 sudo pip install protobuf
+sudo pip install pyftpdlib
 
 sudo aptitude install -y \
     git build-essential libtool \
