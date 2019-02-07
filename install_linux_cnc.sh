@@ -74,6 +74,7 @@ sudo apt install -y libuuid1=2.25.2-6
 sudo apt install -y uuid-dev -f
 sudo aptitude install libavahi-common3=0.6.31-5 -y
 sudo aptitude install libavahi-client-dev -y
+sudo aptitude install libcgroup-dev -y
 
 sudo easy_install pip
 sudo pip install protobuf
