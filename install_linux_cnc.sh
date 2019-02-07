@@ -63,6 +63,7 @@ echoGreen "Install needed packages"
 sudo aptitude install -y cython
 sudo aptitude install -y uuid-runtime
 sudo aptitude install -y libprotobuf-dev
+sudo aptitude install -y libprotoc-dev
 
 sudo aptitude install -y \
     git build-essential libtool \
@@ -85,7 +86,8 @@ cd czmq
 ./autogen.sh && ./configure && make check
 sudo make install
 sudo ldconfig
-cd ..
+cd mc
+..
 sudo rm -r czmq
 sudo apt-get autoremove -y
 sudo apt get clean
