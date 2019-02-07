@@ -68,6 +68,7 @@ sudo aptitude install -y protobuf-compiler
 sudo aptitude install -y python-setuptools
 sudo aptitude install -y libjansson-dev
 sudo aptitude install -y liburiparser-dev
+sudo aptitude install -y libwebsockets-dev
 
 sudo easy_install pip
 sudo pip install protobuf
