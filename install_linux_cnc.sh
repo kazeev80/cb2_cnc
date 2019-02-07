@@ -58,6 +58,8 @@ sudo cp xorg.conf /etc/X11/xorg.conf
 cd ..
 sudo rm -r xf86-video-fbturbo
 
+echoYellow "###################################################################"
+echoGreen "Install needed packages"
 sudo apt install cython
 sudo apt install uuid-runtime
 
