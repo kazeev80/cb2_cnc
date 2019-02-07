@@ -64,6 +64,7 @@ sudo aptitude install -y cython
 sudo aptitude install -y uuid-runtime
 sudo aptitude install -y libprotobuf-dev
 sudo aptitude install -y libprotoc-dev
+sudo aptitude install -y protobuf-compiler
 
 sudo aptitude install -y \
     git build-essential libtool \
