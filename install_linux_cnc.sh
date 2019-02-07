@@ -62,6 +62,7 @@ echoYellow "###################################################################"
 echoGreen "Install needed packages"
 sudo aptitude install -y cython
 sudo aptitude install -y uuid-runtime
+sudo aptitude install -y protobuf
 
 sudo aptitude install -y \
     git build-essential libtool \
