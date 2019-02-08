@@ -73,7 +73,7 @@ sudo apt-get install --no-install-recommends devscripts equivs -y
 #sudo aptitude install -y uuid-runtime
 sudo aptitude install -y libprotobuf-dev
 sudo aptitude install -y protobuf-compiler
-#sudo aptitude install -y python-setuptools
+sudo aptitude install -y python-setuptools
 #sudo aptitude install -y libjansson-dev
 #sudo aptitude install -y liburiparser-dev
 #sudo aptitude install -y libwebsockets-dev
@@ -86,9 +86,9 @@ sudo aptitude install -y protobuf-compiler
 #sudo aptitude install libmodbus-dev -y
 #sudo aptitude install libglib2.0-dev -y
 
-#sudo easy_install pip
-#sudo pip install protobuf
-#sudo pip install pyftpdlib
+sudo easy_install pip
+sudo pip install protobuf
+sudo pip install pyftpdlib
 
 sudo aptitude install -y \
     git build-essential libtool \
