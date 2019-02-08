@@ -91,10 +91,10 @@ sudo apt-get install --no-install-recommends devscripts equivs -y
 #sudo pip install protobuf
 #sudo pip install pyftpdlib
 
-#sudo aptitude install -y \
-#    git build-essential libtool \
-#    pkg-config autotools-dev autoconf automake cmake \
-#    uuid-dev libpcre3-dev libsodium-dev valgrind
+sudo aptitude install -y \
+    git build-essential libtool \
+    pkg-config autotools-dev autoconf automake cmake \
+    uuid-dev libpcre3-dev libsodium-dev valgrind
     
 git clone git://github.com/zeromq/libzmq.git
 cd libzmq
