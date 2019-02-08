@@ -26,7 +26,7 @@ echoYellow "###################################################################"
 echoGreen "set timezone"
 sudo dpkg-reconfigure tzdata
 sudo dpkg-reconfigure locales
-sudo dpkg-reconfigure keyboard
+sudo dpkg-reconfigure keyboard-configuration
 
 echoYellow "###################################################################"
 echoGreen "  Current version `cat /etc/debian_version`"
