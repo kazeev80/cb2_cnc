@@ -62,8 +62,8 @@ sudo sh -c \
 sudo apt-get update
 sudo apt-get install -t wheezy-backports cython
 
-#sudo apt-get install libczmq-dev python-zmq libjansson-dev pkg-config \
-#  libwebsockets-dev libxenomai-dev python-pyftpdlib cython bwidget lsb-release
+sudo apt-get install python-zmq libjansson-dev pkg-config \
+  libwebsockets-dev  python-pyftpdlib cython bwidget lsb-release -y
 
 sudo apt-get install dpkg-dev -y
 sudo apt-get install --no-install-recommends devscripts equivs -y
