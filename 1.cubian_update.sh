@@ -25,6 +25,8 @@ echoGreen(){
 echoYellow "###################################################################"
 echoGreen "set timezone"
 sudo dpkg-reconfigure tzdata
+sudo dpkg-reconfigure locale
+sudo dpkg-reconfigure keyboard
 
 echoYellow "###################################################################"
 echoGreen "  Current version `cat /etc/debian_version`"
