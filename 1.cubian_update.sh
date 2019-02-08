@@ -25,7 +25,7 @@ echoGreen(){
 echoYellow "###################################################################"
 echoGreen "set timezone"
 sudo dpkg-reconfigure tzdata
-sudo dpkg-reconfigure locale
+sudo dpkg-reconfigure locales
 sudo dpkg-reconfigure keyboard
 
 echoYellow "###################################################################"
