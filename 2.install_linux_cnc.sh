@@ -85,6 +85,7 @@ sudo apt install tcl-dev -y
 sudo apt install tk-dev -y
 sudo apt install libreadline-dev -y
 sudo apt install libboost-dev -y
+sudo apt install libglu1-mesa-dev -y
 
 sudo easy_install pip
 sudo pip install protobuf
