@@ -82,6 +82,7 @@ sudo apt install libudev-dev -y
 sudo apt install libusb-dev -y
 sudo apt install libgtk2.0-dev -y
 sudo apt install tcl-dev -y
+sudo apt install tk-dev -y
 
 sudo easy_install pip
 sudo pip install protobuf
