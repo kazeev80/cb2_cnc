@@ -23,10 +23,6 @@ echoGreen(){
 
 
 echoYellow "###################################################################"
-echoGreen "set time via NTP"
-sudo ntpdate-debian
-
-echoYellow "###################################################################"
 echoGreen "Install debian-keyring"
 sudo apt-get install debian-keyring debian-archive-keyring -y
 
@@ -60,7 +56,7 @@ sudo rm -r xf86-video-fbturbo
 
 echoYellow "###################################################################"
 echoGreen "Install needed packages"
-sudo aptitude install dpkg-dev -y -f
+#sudo aptitude install dpkg-dev -y -f
 #sudo aptitude install -y cython
 #sudo aptitude install -y uuid-runtime
 #sudo aptitude install -y libprotobuf-dev
