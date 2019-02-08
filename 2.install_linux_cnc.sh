@@ -96,26 +96,26 @@ sudo apt-get install --no-install-recommends devscripts equivs -y
 #    pkg-config autotools-dev autoconf automake cmake \
 #    uuid-dev libpcre3-dev libsodium-dev valgrind
     
-#git clone git://github.com/zeromq/libzmq.git
-#cd libzmq
-#./autogen.sh
+git clone git://github.com/zeromq/libzmq.git
+cd libzmq
+./autogen.sh
 # do not specify "--with-libsodium" if you prefer to use internal tweetnacl security implementation (recommended for development)
-#./configure --with-libsodium
-#make check
-#sudo make install
-#sudo ldconfig
-#cd ..
-#sudo rm -r libzmq
+./configure --with-libsodium
+make check
+sudo make install
+sudo ldconfig
+cd ..
+sudo rm -r libzmq
 
-#git clone git://github.com/zeromq/czmq.git
-#cd czmq
-#./autogen.sh && ./configure && make check
-#sudo make install
-#sudo ldconfig
-#cd ..
-#sudo rm -r czmq
-#sudo apt-get autoremove -y
-#sudo apt get clean
+git clone git://github.com/zeromq/czmq.git
+cd czmq
+./autogen.sh && ./configure && make check
+sudo make install
+sudo ldconfig
+cd ..
+sudo rm -r czmq
+sudo apt-get autoremove -y
+sudo apt get clean
 
 echoYellow "###################################################################"
 echoGreen "  Installing linux cnc...."
