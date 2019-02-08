@@ -120,10 +120,14 @@ sudo apt-get install --no-install-recommends devscripts equivs -y
 echoYellow "###################################################################"
 echoGreen "  Installing linux cnc...."
 git clone https://github.com/machinekit/machinekit.git
-cd machinekit/src
+cd machinekit
+debian/configure -prx
+sudo mk-build-deps -ir
+cd src
 ./autogen.sh
 ./configure
-sudo make
+make
+sudo make setuid
 
 
 
