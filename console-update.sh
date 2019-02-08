@@ -68,7 +68,6 @@ sudo bash -c "echo 'ttys /dev/tty[1-6]'                    >>  /etc/console-cyri
 
 echoYellow "###################################################################"
 echoGreen "  locale RU.UTF-8"
-# http://linuxforum.ru/post/413228
 
 sudo bash -c "sh ./prepare-cubian/script/mykeyboardconf.sh"
 
