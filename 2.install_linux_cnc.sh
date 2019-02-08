@@ -115,7 +115,7 @@ sudo ldconfig
 cd ..
 sudo rm -r czmq
 sudo apt-get autoremove -y
-sudo apt get clean
+sudo apt-get clean
 
 echoYellow "###################################################################"
 echoGreen "  Installing linux cnc...."
