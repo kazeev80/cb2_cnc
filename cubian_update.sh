@@ -23,10 +23,6 @@ echoGreen(){
 
 
 echoYellow "###################################################################"
-echoGreen "set time via NTP"
-sudo ntpdate-debian
-
-echoYellow "###################################################################"
 echoGreen "set locales"
 sudo dpkg-reconfigure locales
 
@@ -51,7 +47,7 @@ echoGreen "  Update to Debian 8"
 echoYellow "###################################################################"
 echoGreen "  Update /etc/apt/sources.list"
 sudo bash -c "echo 'deb http://debian.mirror.yandex.ru/debian/ jessie main contrib'              > /etc/apt/sources.list"
-sudo bash -c "echo 'deb http://security.debian.org/ jessie/updates sid main contrib'                >> /etc/apt/sources.list"
+sudo bash -c "echo 'deb http://security.debian.org/ jessie/updates main contrib'                >> /etc/apt/sources.list"
 sudo bash -c "echo 'deb http://debian.mirror.yandex.ru/debian/ jessie-updates main contrib'     >> /etc/apt/sources.list"
 sudo bash -c "echo 'deb http://packages.cubian.org/ wheezy main non-free'                           >> /etc/apt/sources.list"
 sudo apt-get update -y
@@ -112,6 +108,7 @@ sudo apt-get install xrdp -y -f
 echoYellow "###################################################################"
 echoGreen "  Устанавливаем VIM"
 sudo apt-get install vim -y -f
+sudo apt-get install htop -y -f
 
 echoYellow "###################################################################"
 echo -n "  Current version"
