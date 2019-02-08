@@ -83,6 +83,7 @@ sudo apt install libusb-dev -y
 sudo apt install libgtk2.0-dev -y
 sudo apt install tcl-dev -y
 sudo apt install tk-dev -y
+sudo apt install libreadline-dev -y
 
 sudo easy_install pip
 sudo pip install protobuf
@@ -128,7 +129,7 @@ echoYellow "###################################################################"
 echoGreen "  Installing linux cnc...."
 git clone https://github.com/machinekit/machinekit.git
 cd machinekit
-debian/configure -prx
+debian/configure -pr
 sudo mk-build-deps -ir
 cd src
 ./autogen.sh
