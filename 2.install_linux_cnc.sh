@@ -65,6 +65,9 @@ sudo apt-get install -t wheezy-backports cython
 #sudo apt-get install libczmq-dev python-zmq libjansson-dev pkg-config \
 #  libwebsockets-dev libxenomai-dev python-pyftpdlib cython bwidget lsb-release
 
+sudo apt-get install dpkg-dev -y
+sudo apt-get install --no-install-recommends devscripts equivs -y
+
 #sudo aptitude install dpkg-dev -y -f
 #sudo aptitude install -y cython
 #sudo aptitude install -y uuid-runtime
