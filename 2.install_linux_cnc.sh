@@ -85,6 +85,7 @@ sudo apt install libavahi-client-dev -y
 sudo apt install libcgroup-dev -y
 sudo apt install libmodbus-dev -y
 #sudo aptitude install libglib2.0-dev -y
+sudo apt install libudev-dev -y
 sudo apt install libusb-dev -y
 
 sudo easy_install pip
