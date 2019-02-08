@@ -51,7 +51,7 @@ git clone https://github.com/ssvb/xf86-video-fbturbo
 cd xf86-video-fbturbo
 sudo apt-get install git build-essential xorg-dev xutils-dev x11proto-dri2-dev
 sudo apt-get install libltdl-dev libtool automake libdrm-dev
-autoreconf -vi
+sudo autoreconf -vi
 ./configure --prefix=/usr
 sudo make install
 sudo cp xorg.conf /etc/X11/xorg.conf
@@ -60,54 +60,63 @@ sudo rm -r xf86-video-fbturbo
 
 echoYellow "###################################################################"
 echoGreen "Install needed packages"
-sudo aptitude install -y cython
-sudo aptitude install -y uuid-runtime
-sudo aptitude install -y libprotobuf-dev
-sudo aptitude install -y libprotoc-dev
-sudo aptitude install -y protobuf-compiler
-sudo aptitude install -y python-setuptools
-sudo aptitude install -y libjansson-dev
-sudo aptitude install -y liburiparser-dev
-sudo aptitude install -y libwebsockets-dev
-sudo aptitude install -y libssl-dev
-sudo apt install -y libuuid1=2.25.2-6
-sudo apt install -y uuid-dev -f
-sudo aptitude install libavahi-common3=0.6.31-5 -y
-sudo aptitude install libavahi-client-dev -y
-sudo aptitude install libcgroup-dev -y
-sudo aptitude install libmodbus-dev -y
-sudo aptitude install libglib2.0-dev -y
+sudo aptitude install dpkg-dev -y -f
+#sudo aptitude install -y cython
+#sudo aptitude install -y uuid-runtime
+#sudo aptitude install -y libprotobuf-dev
+#sudo aptitude install -y libprotoc-dev
+#sudo aptitude install -y protobuf-compiler
+#sudo aptitude install -y python-setuptools
+#sudo aptitude install -y libjansson-dev
+#sudo aptitude install -y liburiparser-dev
+#sudo aptitude install -y libwebsockets-dev
+#sudo aptitude install -y libssl-dev
+#sudo apt install -y libuuid1=2.25.2-6
+#sudo apt install -y uuid-dev -f
+#sudo aptitude install libavahi-common3=0.6.31-5 -y
+#sudo aptitude install libavahi-client-dev -y
+#sudo aptitude install libcgroup-dev -y
+#sudo aptitude install libmodbus-dev -y
+#sudo aptitude install libglib2.0-dev -y
 
-sudo easy_install pip
-sudo pip install protobuf
-sudo pip install pyftpdlib
+#sudo easy_install pip
+#sudo pip install protobuf
+#sudo pip install pyftpdlib
 
-sudo aptitude install -y \
-    git build-essential libtool \
-    pkg-config autotools-dev autoconf automake cmake \
-    uuid-dev libpcre3-dev libsodium-dev valgrind
+#sudo aptitude install -y \
+#    git build-essential libtool \
+#    pkg-config autotools-dev autoconf automake cmake \
+#    uuid-dev libpcre3-dev libsodium-dev valgrind
     
-git clone git://github.com/zeromq/libzmq.git
-cd libzmq
-./autogen.sh
+#git clone git://github.com/zeromq/libzmq.git
+#cd libzmq
+#./autogen.sh
 # do not specify "--with-libsodium" if you prefer to use internal tweetnacl security implementation (recommended for development)
-./configure --with-libsodium
-make check
-sudo make install
-sudo ldconfig
-cd ..
-sudo rm -r libzmq
+#./configure --with-libsodium
+#make check
+#sudo make install
+#sudo ldconfig
+#cd ..
+#sudo rm -r libzmq
 
-git clone git://github.com/zeromq/czmq.git
-cd czmq
-./autogen.sh && ./configure && make check
-sudo make install
-sudo ldconfig
-cd mc
-..
-sudo rm -r czmq
-sudo apt-get autoremove -y
-sudo apt get clean
+#git clone git://github.com/zeromq/czmq.git
+#cd czmq
+#./autogen.sh && ./configure && make check
+#sudo make install
+#sudo ldconfig
+#cd ..
+#sudo rm -r czmq
+#sudo apt-get autoremove -y
+#sudo apt get clean
 
 echoYellow "###################################################################"
 echoGreen "  Installing linux cnc...."
+git clone https://github.com/machinekit/machinekit.git
+cd machinekit/src
+./autogen.sh
+./configure
+sudo make
+
+
+
+
