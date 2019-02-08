@@ -23,10 +23,6 @@ echoGreen(){
 
 
 echoYellow "###################################################################"
-echoGreen "Install debian-keyring"
-sudo apt-get install debian-keyring debian-archive-keyring -y
-
-echoYellow "###################################################################"
 echoGreen "Update base packages"
 sudo apt-get update -y
 
@@ -99,7 +95,6 @@ sudo apt install -y \
 git clone git://github.com/zeromq/libzmq.git
 cd libzmq
 ./autogen.sh
-# do not specify "--with-libsodium" if you prefer to use internal tweetnacl security implementation (recommended for development)
 ./configure --with-libsodium
 make check
 sudo make install
