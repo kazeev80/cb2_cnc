@@ -80,6 +80,7 @@ sudo apt install libmodbus-dev -y
 sudo apt install libglib2.0-dev -y
 sudo apt install libudev-dev -y
 sudo apt install libusb-dev -y
+sudo apt install libgtk20-dev -y
 
 sudo easy_install pip
 sudo pip install protobuf
