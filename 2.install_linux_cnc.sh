@@ -84,6 +84,7 @@ sudo apt install libgtk2.0-dev -y
 sudo apt install tcl-dev -y
 sudo apt install tk-dev -y
 sudo apt install libreadline-dev -y
+sudo apt install libboost-dev -y
 
 sudo easy_install pip
 sudo pip install protobuf
