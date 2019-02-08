@@ -62,35 +62,35 @@ sudo sh -c \
 sudo apt-get update
 sudo apt-get install -t wheezy-backports cython
 
-sudo apt-get install python-zmq libjansson-dev pkg-config \
+sudo apt install python-zmq libjansson-dev pkg-config \
   libwebsockets-dev  python-pyftpdlib cython bwidget lsb-release -y
 
-sudo apt-get install dpkg-dev -y
-sudo apt-get install --no-install-recommends devscripts equivs -y
+sudo apt install dpkg-dev -y
+sudo apt install --no-install-recommends devscripts equivs -y
 
 #sudo aptitude install dpkg-dev -y -f
 #sudo aptitude install -y cython
 #sudo aptitude install -y uuid-runtime
-sudo aptitude install -y libprotobuf-dev
-sudo aptitude install -y protobuf-compiler
-sudo aptitude install -y python-setuptools
-sudo aptitude install -y libjansson-dev
-sudo aptitude install -y liburiparser-dev
+sudo apt install -y libprotobuf-dev
+sudo apt install -y protobuf-compiler
+sudo apt install -y python-setuptools
+sudo apt install -y libjansson-dev
+sudo apt install -y liburiparser-dev
 #sudo aptitude install -y libwebsockets-dev
 sudo aptitude install -y libssl-dev
 #sudo apt install -y libuuid1=2.25.2-6
 #sudo apt install -y uuid-dev -f
 #sudo aptitude install libavahi-common3=0.6.31-5 -y
-sudo aptitude install libavahi-client-dev -y
-sudo aptitude install libcgroup-dev -y
-sudo aptitude install libmodbus-dev -y
+sudo apt install libavahi-client-dev -y
+sudo apt install libcgroup-dev -y
+sudo apt install libmodbus-dev -y
 #sudo aptitude install libglib2.0-dev -y
 
 sudo easy_install pip
 sudo pip install protobuf
 sudo pip install pyftpdlib
 
-sudo aptitude install -y \
+sudo apt install -y \
     git build-essential libtool \
     pkg-config autotools-dev autoconf automake cmake \
     uuid-dev libpcre3-dev libsodium-dev valgrind
