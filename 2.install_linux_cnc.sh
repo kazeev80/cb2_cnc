@@ -118,6 +118,16 @@ sudo rm -r czmq
 sudo apt-get autoremove -y
 sudo apt-get clean
 
+wget http://sourceforge.net/projects/libusb/files/libusb-1.0/libusb-1.0.9/libusb-1.0.9.tar.bz2
+tar xjf libusb-1.0.9.tar.bz2
+cd libusb-1.0.9
+./configure
+make
+sudo make install
+cd ..
+rm -r libusb-1.0.9
+rm libusb-1.0.9.tar.bz2
+
 echoYellow "###################################################################"
 echoGreen "  Installing linux cnc...."
 git clone https://github.com/machinekit/machinekit.git
