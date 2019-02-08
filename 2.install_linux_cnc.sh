@@ -71,7 +71,7 @@ sudo apt-get install --no-install-recommends devscripts equivs -y
 #sudo aptitude install dpkg-dev -y -f
 #sudo aptitude install -y cython
 #sudo aptitude install -y uuid-runtime
-#sudo aptitude install -y libprotobuf-dev
+sudo aptitude install -y libprotobuf-dev
 #sudo aptitude install -y libprotoc-dev
 #sudo aptitude install -y protobuf-compiler
 #sudo aptitude install -y python-setuptools
