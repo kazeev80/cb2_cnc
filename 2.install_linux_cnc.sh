@@ -68,23 +68,16 @@ sudo apt install python-zmq libjansson-dev pkg-config \
 sudo apt install dpkg-dev -y
 sudo apt install --no-install-recommends devscripts equivs -y
 
-#sudo aptitude install dpkg-dev -y -f
-#sudo aptitude install -y cython
-#sudo aptitude install -y uuid-runtime
 sudo apt install -y libprotobuf-dev
 sudo apt install -y protobuf-compiler
 sudo apt install -y python-setuptools
 sudo apt install -y libjansson-dev
 sudo apt install -y liburiparser-dev
-#sudo aptitude install -y libwebsockets-dev
-sudo aptitude install -y libssl-dev
-#sudo apt install -y libuuid1=2.25.2-6
-#sudo apt install -y uuid-dev -f
-#sudo aptitude install libavahi-common3=0.6.31-5 -y
+sudo apt install -y libssl-dev
 sudo apt install libavahi-client-dev -y
 sudo apt install libcgroup-dev -y
 sudo apt install libmodbus-dev -y
-sudo aptitude install libglib2.0-dev -y
+sudo apt install libglib2.0-dev -y
 sudo apt install libudev-dev -y
 sudo apt install libusb-dev -y
 
