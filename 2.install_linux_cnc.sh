@@ -74,16 +74,16 @@ sudo apt-get install --no-install-recommends devscripts equivs -y
 sudo aptitude install -y libprotobuf-dev
 sudo aptitude install -y protobuf-compiler
 sudo aptitude install -y python-setuptools
-#sudo aptitude install -y libjansson-dev
-#sudo aptitude install -y liburiparser-dev
-#sudo aptitude install -y libwebsockets-dev
-#sudo aptitude install -y libssl-dev
+sudo aptitude install -y libjansson-dev
+sudo aptitude install -y liburiparser-dev
+sudo aptitude install -y libwebsockets-dev
+sudo aptitude install -y libssl-dev
 #sudo apt install -y libuuid1=2.25.2-6
 #sudo apt install -y uuid-dev -f
-#sudo aptitude install libavahi-common3=0.6.31-5 -y
-#sudo aptitude install libavahi-client-dev -y
-#sudo aptitude install libcgroup-dev -y
-#sudo aptitude install libmodbus-dev -y
+sudo aptitude install libavahi-common3=0.6.31-5 -y
+sudo aptitude install libavahi-client-dev -y
+sudo aptitude install libcgroup-dev -y
+sudo aptitude install libmodbus-dev -y
 #sudo aptitude install libglib2.0-dev -y
 
 sudo easy_install pip
