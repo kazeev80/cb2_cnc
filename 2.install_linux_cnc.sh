@@ -56,6 +56,15 @@ sudo rm -r xf86-video-fbturbo
 
 echoYellow "###################################################################"
 echoGreen "Install needed packages"
+sudo sh -c \
+  "echo 'deb http://ftp.us.debian.org/debian wheezy-backports main' > \
+  /etc/apt/sources.list.d/wheezy-backports.list"
+sudo apt-get update
+sudo apt-get install -t wheezy-backports cython
+
+#sudo apt-get install libczmq-dev python-zmq libjansson-dev pkg-config \
+#  libwebsockets-dev libxenomai-dev python-pyftpdlib cython bwidget lsb-release
+
 #sudo aptitude install dpkg-dev -y -f
 #sudo aptitude install -y cython
 #sudo aptitude install -y uuid-runtime
