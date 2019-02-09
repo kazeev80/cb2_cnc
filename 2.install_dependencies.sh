@@ -38,17 +38,17 @@ sudo apt-get update -y
 
 echoYellow "###################################################################"
 echoGreen "  Update mali video drivers"
-sudo rm -r xf86-video-fbturbo
-git clone https://github.com/ssvb/xf86-video-fbturbo
-cd xf86-video-fbturbo
-sudo apt-get install git build-essential xorg-dev xutils-dev x11proto-dri2-dev
-sudo apt-get install libltdl-dev libtool automake libdrm-dev
-sudo autoreconf -vi
-./configure --prefix=/usr
-sudo make install
-sudo cp xorg.conf /etc/X11/xorg.conf
-cd ..
-sudo rm -r xf86-video-fbturbo
+#sudo rm -r xf86-video-fbturbo
+#git clone https://github.com/ssvb/xf86-video-fbturbo
+#cd xf86-video-fbturbo
+#sudo apt-get install git build-essential xorg-dev xutils-dev x11proto-dri2-dev
+#sudo apt-get install libltdl-dev libtool automake libdrm-dev
+#sudo autoreconf -vi
+#./configure --prefix=/usr
+#sudo make install
+#sudo cp xorg.conf /etc/X11/xorg.conf
+#cd ..
+#sudo rm -r xf86-video-fbturbo
 
 echoYellow "###################################################################"
 echoGreen "Install needed packages"
@@ -121,18 +121,6 @@ sudo make install
 cd ..
 rm -r libusb-1.0.9
 rm libusb-1.0.9.tar.bz2
-
-#echoYellow "###################################################################"
-#echoGreen "  Installing linux cnc...."
-#git clone https://github.com/machinekit/machinekit.git
-#cd machinekit
-#debian/configure -pr
-#sudo mk-build-deps -ir
-#cd src
-#./autogen.sh
-#./configure
-#make
-#sudo make setuid
 
 
 
