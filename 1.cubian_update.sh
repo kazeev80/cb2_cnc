@@ -35,9 +35,10 @@ echoGreen "  Update to Debian 8"
 echoYellow "###################################################################"
 echoGreen "  Update /etc/apt/sources.list"
 sudo bash -c "echo 'deb http://debian.mirror.yandex.ru/debian/ jessie main contrib'              > /etc/apt/sources.list"
-sudo bash -c "echo 'deb http://security.debian.org/ jessie/updates main contrib'                >> /etc/apt/sources.list"
-sudo bash -c "echo 'deb http://debian.mirror.yandex.ru/debian/ jessie-updates main contrib'     >> /etc/apt/sources.list"
-sudo bash -c "echo 'deb http://packages.cubian.org/ wheezy main non-free'                           >> /etc/apt/sources.list"
+sudo bash -c "echo 'deb http://security.debian.org/ jessie/updates main contrib'                 >> /etc/apt/sources.list"
+sudo bash -c "echo 'deb http://ftp.de.debian.org/debian sid main'                                >> /etc/apt/sources.list"
+sudo bash -c "echo 'deb http://debian.mirror.yandex.ru/debian/ jessie-updates main contrib'      >> /etc/apt/sources.list"
+sudo bash -c "echo 'deb http://packages.cubian.org/ wheezy main non-free'                        >> /etc/apt/sources.list"
 sudo apt-get update -y
 sudo apt-get autoremove -y -f
 sudo apt-get clean
