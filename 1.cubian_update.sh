@@ -42,24 +42,24 @@ sudo bash -c "echo 'deb http://packages.cubian.org/ wheezy main non-free'       
 sudo apt-get update -y
 sudo apt-get autoremove -y -f
 sudo apt-get clean
-sudo apt-get update -y
+#sudo apt-get update -y
 
-echoYellow "###################################################################"
-echoGreen "  Add /etc/apt/preferences.d/00-linux-sunxi"
-sudo bash -c "echo 'Package: *'                            > /etc/apt/preferences.d/00-linux-sunxi"
-sudo bash -c "echo 'Pin: origin packages.linux-sunxi.org' >> /etc/apt/preferences.d/00-linux-sunxi"
-sudo bash -c "echo 'Pin-Priority: 10'                     >> /etc/apt/preferences.d/00-linux-sunxi"
+#echoYellow "###################################################################"
+#echoGreen "  Add /etc/apt/preferences.d/00-linux-sunxi"
+#sudo bash -c "echo 'Package: *'                            > /etc/apt/preferences.d/00-linux-sunxi"
+#sudo bash -c "echo 'Pin: origin packages.linux-sunxi.org' >> /etc/apt/preferences.d/00-linux-sunxi"
+#sudo bash -c "echo 'Pin-Priority: 10'                     >> /etc/apt/preferences.d/00-linux-sunxi"
 
-echoGreen "  Add /etc/apt/sources.list.d/linux-sunxi.list"
-sudo bash -c "echo 'deb http://packages.linux-sunxi.org/ubuntu/ quantal main'      > /etc/apt/sources.list.d/linux-sunxi.list"
-sudo bash -c "echo 'deb-src http://packages.linux-sunxi.org/ubuntu/ quantal main'>> /etc/apt/sources.list.d/linux-sunxi.list"
+#echoGreen "  Add /etc/apt/sources.list.d/linux-sunxi.list"
+#sudo bash -c "echo 'deb http://packages.linux-sunxi.org/ubuntu/ quantal main'      > /etc/apt/sources.list.d/linux-sunxi.list"
+#sudo bash -c "echo 'deb-src http://packages.linux-sunxi.org/ubuntu/ quantal main'>> /etc/apt/sources.list.d/linux-sunxi.list"
 
-sudo apt-get clean
-sudo apt-get update -y
+#sudo apt-get clean
+#sudo apt-get update -y
 
 echoYellow "###################################################################"
 echoGreen "  udev update"
-sudo  touch /etc/udev/kernel-upgrade
+sudo touch /etc/udev/kernel-upgrade
 sudo apt-get install udev -y
 sudo apt-get autoremove -y -f
 sudo apt-get clean
@@ -90,7 +90,7 @@ sudo bash -c "echo net.ipv6.conf.all.disable_ipv6=1 > /etc/sysctl.d/disableipv6.
 
 echoYellow "###################################################################"
 echo -n "  Current version"
-cat /etc/debian_version
+cat /etc/os_version
 echoYellow "###################################################################"
 
 #sudo reboot
