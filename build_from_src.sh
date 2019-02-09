@@ -1,6 +1,8 @@
 echo "###################################################################"
 echo "  Installing linux cnc...."
-git clone https://github.com/machinekit/machinekit.git
+if [ ! -d "machinekit" ]; then
+    git clone https://github.com/machinekit/machinekit.git
+fi
 cd machinekit
 debian/configure -pr
 sudo mk-build-deps -ir
