@@ -61,6 +61,8 @@ sudo apt-get install -t wheezy-backports cython
 sudo apt install python-zmq libjansson-dev pkg-config \
   libwebsockets-dev  python-pyftpdlib cython bwidget lsb-release -y
 
+sudo aptitude install libczmq-dev -y
+
 sudo apt install dpkg-dev -y
 sudo apt install --no-install-recommends devscripts equivs -y
 
@@ -87,30 +89,30 @@ sudo easy_install pip
 sudo pip install protobuf
 sudo pip install pyftpdlib
 
-sudo apt install -y \
-    git build-essential libtool \
-    pkg-config autotools-dev autoconf automake cmake \
-    uuid-dev libpcre3-dev libsodium-dev valgrind
+#sudo apt install -y \
+#    git build-essential libtool \
+#    pkg-config autotools-dev autoconf automake cmake \
+#    uuid-dev libpcre3-dev libsodium-dev valgrind
     
-git clone git://github.com/zeromq/libzmq.git
-cd libzmq
-./autogen.sh
-./configure --with-libsodium
-make check
-sudo make install
-sudo ldconfig
-cd ..
-sudo rm -r libzmq
+#git clone git://github.com/zeromq/libzmq.git
+#cd libzmq
+#./autogen.sh
+#./configure --with-libsodium
+#make check
+#sudo make install
+#sudo ldconfig
+#cd ..
+#sudo rm -r libzmq
 
-git clone git://github.com/zeromq/czmq.git
-cd czmq
-./autogen.sh && ./configure && make check
-sudo make install
-sudo ldconfig
-cd ..
-sudo rm -r czmq
-sudo apt-get autoremove -y
-sudo apt-get clean
+#git clone git://github.com/zeromq/czmq.git
+#cd czmq
+#./autogen.sh && ./configure && make check
+#sudo make install
+#sudo ldconfig
+#cd ..
+#sudo rm -r czmq
+#sudo apt-get autoremove -y
+#sudo apt-get clean
 
 wget http://sourceforge.net/projects/libusb/files/libusb-1.0/libusb-1.0.9/libusb-1.0.9.tar.bz2
 tar xjf libusb-1.0.9.tar.bz2
