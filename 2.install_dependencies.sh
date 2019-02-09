@@ -66,34 +66,17 @@ sudo aptitude install libczmq-dev -y
 sudo apt install dpkg-dev -y
 sudo apt install --no-install-recommends devscripts equivs -y
 
-sudo apt install -y libprotobuf-dev
-sudo apt install -y protobuf-compiler
-sudo apt install -y python-setuptools
-sudo apt install -y libjansson-dev
-sudo apt install -y liburiparser-dev
-sudo apt install -y libssl-dev
-sudo apt install libavahi-client-dev -y
-sudo apt install libcgroup-dev -y
-sudo apt install libmodbus-dev -y
-sudo apt install libglib2.0-dev -y
-sudo apt install libudev-dev -y
-sudo apt install libusb-dev -y
-sudo apt install libgtk2.0-dev -y
-sudo apt install tcl-dev -y
-sudo apt install tk-dev -y
-sudo apt install libreadline-dev -y
-sudo apt install libboost-dev -y
-sudo apt install libglu1-mesa-dev -y
+sudo apt install -y libprotobuf-dev protobuf-compiler python-setuptools libjansson-dev liburiparser-dev \
+    libssl-dev libavahi-client-dev libcgroup-dev libmodbus-dev libglib2.0-dev libudev-dev libusb-dev \
+    libgtk2.0-dev tcl-dev tk-dev libreadline-dev libboost-dev libglu1-mesa-dev \
+    git build-essential libtool \
+    pkg-config autotools-dev autoconf automake cmake \
+    uuid-dev libpcre3-dev libsodium-dev valgrind
 
 sudo easy_install pip
 sudo pip install protobuf
 sudo pip install pyftpdlib
 
-#sudo apt install -y \
-#    git build-essential libtool \
-#    pkg-config autotools-dev autoconf automake cmake \
-#    uuid-dev libpcre3-dev libsodium-dev valgrind
-    
 #git clone git://github.com/zeromq/libzmq.git
 #cd libzmq
 #./autogen.sh
