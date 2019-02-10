@@ -1,3 +1,46 @@
+
+linux-sdk-card readme
+=====================
+1.Get linux-sdk-card
+--------------------
+
+$ mkdir linux-sdk-card
+$ cd linux-sdk-card
+1) kernel-source:
+$ git clone https://github.com/cubieboard/linux-sdk-kernel-source.git
+$ mv linux-sdk-kernel-source linux-sunxi
+2) tools:
+$ git clone https://github.com/cubieboard/linux-sdk-card-tools.git
+$ mv linux-sdk-card-tools tools
+3) products:
+$ git clone https://github.com/cubieboard/linux-sdk-card-products.git
+$ mv linux-sdk-card-products products
+4) rootfs&u-boot:
+$ git clone https://github.com/cubieboard/linux-sdk-binaries.git
+$ mv linux-sdk-binaries binaries
+Get file from:
+http://dl.cubieboard.org/model/commom/linux-sdk-binaries 
+
+
+2.Compilation README
+--------------------
+
+1) Choose product and linux-distribution: 
+linux-sdk-card$ source tools/scripts/envsetup.sh 
+Products
+   0 - cb
+   1 - cb2
+   2 - ct
+please select a board:
+Cubieboard1:
+   0 - cb-cubieez
+Cubieboard2:
+   0 - cb2-cubieez
+Cubietruck:
+   0 - ct-cubieez-hdmi
+   1 - ct-cubieez-vga
+   2 - ct-debian-server
+
 # cb2_cnc
 
 Building custom (real-time) kernel for Cubieboard 2
