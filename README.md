@@ -1,3 +1,51 @@
+#####
+
+On Ubuntu:
+
+Prepare Your Build Environment
+
+wget http://fr.archive.ubuntu.com/ubuntu/pool/main/u/uboot-mkimage/uboot-mkimage_0.4build1_amd64.deb
+sudo dpkg -i uboot*.deb
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential u-boot-tools
+sudo apt-get install gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
+sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev git wget fakeroot kernel-package zlib1g-dev
+sudo apt-get install libncurses5-dev 
+
+
+Getting Source Code
+
+mkdir maker-env/
+cd maker-env
+git clone https://github.com/cubieboard/linux-sdk-card-products.git products
+git clone https://github.com/cubieboard/linux-sdk-card-tools.git tools
+git clone https://github.com/cubieboard/linux-sdk-binaries.git binaries
+git clone https://github.com/cubieboard/linux-sunxi.git linux-sunxi
+cd linux-sunxi
+wget http://dl.cubieboard.org/software/a20-cubieboard/u-boot/u-boot-sunxi-with-spl-cb2-20140107.bin
+git checkout -b cb2-sunxi-3.4 origin/cb2/sunxi-3.4
+cd -
+cd binaries
+wget http://cdimage.ubuntu.com/ubuntu-core/releases/14.04/release/ubuntu-core-14.04-core-armhf.tar.gz
+wget http://cdimage.ubuntu.com/ubuntu-core/releases/15.04/release/ubuntu-core-15.04-core-armhf.tar.gz
+wget http://dl.cubieboard.org/model/commom/linux-sdk-binaries/card_flash_nand_rootfs.tar.gz
+wget http://dl.cubieboard.org/model/commom/linux-sdk-binaries/card_flash_rootfs.tar.gz
+wget http://dl.cubieboard.org/model/commom/linux-sdk-binaries/u-boot-a20.tar.gz
+gunzip *.gz
+cd -
+
+
+Compiling
+
+source tools/scripts/envsetup.sh
+select ct-ubuntu
+cb_build_card_image
+cb_part_install_tfcard nand sdX pack
+cb_install_tfcard nand sdX
+
+#####
+
 
 linux-sdk-card readme
 =====================
