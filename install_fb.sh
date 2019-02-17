@@ -68,3 +68,13 @@ Section \"Monitor\"
         Identifier        \"My Monitor\"
         Option          \"DPMS\" \"false\"
 EndSection'      > /etc/X11/xorg.conf.d/99-fbturbo.conf"
+
+sudo bash -c "echo 'KERNEL==\"mali\", MODE=\"0660\", GROUP=\"video\"
+KERNEL==\"ump\", MODE=\"0660\", GROUP=\"video\"
+KERNEL==\"disp\", MODE=\"0660\", GROUP=\"video\"
+KERNEL==\"g2d\", MODE=\"0660\", GROUP=\"video\"
+KERNEL==\"fb*\", MODE=\"0660\", GROUP=\"video\"
+KERNEL==\"cedar_dev\", MODE=\"0660\", GROUP=\"video\"'      > /etc/udev/rules.d/50-mali.rules"
+
+
+sudo usermod -aG video $USER
