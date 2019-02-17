@@ -48,3 +48,23 @@ autoreconf -v -i
 ./configure --prefix=/usr
 make
 sudo make install
+
+
+sudo bash -c "echo 'Section \"Screen\"
+        Identifier        \"My Screen\"
+        Device          \"Allwinner A10/A13 FBDEV\"
+        Monitor         \"My Monito\r"
+EndSection
+ 
+Section \"Device\"
+        Identifier        \"Allwinner A10/A13 FBDEV\"
+        Driver          \"fbturbo\"
+        Option          \"fbdev\" \"/dev/fb0\"
+        Option          \"SwapbuffersWait\" \"true\"
+        Option          \"AccelMethod\" \"G2D\"
+EndSection
+ 
+Section \"Monitor\"
+        Identifier        \"My Monitor\"
+        Option          \"DPMS\" \"false\"
+EndSection'      > /etc/X11/xorg.conf.d/99-fbturbo.conf"
