@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Name=launch my-mill1
+Exec=linuxcnc /home/cubie/machinekit/configs/my-mill1/my-mill1.ini
+Type=Application
+Comment=Desktop Launcher for Machinekit config made by Stepconf
+Icon=/usr/share/linuxcnc/machinekiticon.png
